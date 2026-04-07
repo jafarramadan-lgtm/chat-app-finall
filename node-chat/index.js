@@ -34,7 +34,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:true, //url front
+    origin:"https://chat-app-finall-3s2u.vercel.app", //url front
     credentials: true,
   }),
 );
