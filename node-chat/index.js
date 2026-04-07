@@ -31,15 +31,15 @@ const { Message } = require("./models/messages");
 const CryptoJs = require("crypto-js");
 
 const app = express();
-app.use(cookieParser());
-app.use(express.json());
+
 app.use(
   cors({
     origin: "https://chat-app-finall-3s2u.vercel.app", //url front
     credentials: true,
   }),
 );
-
+app.use(cookieParser());
+app.use(express.json());
 //monogdb//
 mongoose
   .connect(process.env.MONGOOSECONNECT)
