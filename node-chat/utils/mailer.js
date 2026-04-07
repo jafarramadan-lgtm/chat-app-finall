@@ -15,7 +15,7 @@ const sendEmail = async (to, code) => {
     const info = await transporter.sendMail({
       from: '"Chat Appp" ramadangafer5@gmail.com', // sender address
       to: to, // list of recipients
-      subject: "رمز التحقق الخاص بك   :", // subject line
+      subject: "رمز التحقق الخاص بك  :", // subject line
       text: `مرحبا ,كود التحقق الخاص بك هو ${code}`, // plain text body
       html: `<b>  مرحبا ,كود التحقق الخاص بك هو ${code}</b>`, // HTML body
     });
