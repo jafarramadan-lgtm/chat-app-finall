@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
   secure: true, // use STARTTLS (upgrade connection to TLS after connecting)
   auth: {
     user: "00fa0e1c792a00",
-    pass: e72ac6aadab258,
+    pass: "e72ac6aadab258",
   },
 });
 const sendEmail = async (to, code) => {
