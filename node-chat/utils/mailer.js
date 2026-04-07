@@ -6,8 +6,8 @@ const transporter = nodemailer.createTransport({
   port: 2525,
   secure: false, // use STARTTLS (upgrade connection to TLS after connecting)
   auth: {
-    user: "00fa0e1c792a00",
-    pass: "e72ac6aadab258",
+    user: " ",
+    pass: " ",
   },
   tls:{
     rejectUnauthorized:false
