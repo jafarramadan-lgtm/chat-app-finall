@@ -32,7 +32,9 @@ exports.register = async (req, res) => {
       return res.status(401).send({ message: "worng email or passowr" });
     }
     const code = Math.floor(100000 + Math.random() * 900000);
-    await sendEmail(email, code);
+    try{
+     await sendEmail(email, code);
+    }catch(e){console.error("Email faild but it is okay:,e.message")}
     const newCode=  new Code()
     newCode.email=email;
     newCode.code=code;
