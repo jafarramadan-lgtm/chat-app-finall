@@ -68,7 +68,7 @@ export default function Register() {
             }
           } catch (error) {
             setload(false);
-            alert(result.message || "Repeate email or password");
+          console.log(e.message);
           }
         }}
       >
