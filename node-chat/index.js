@@ -29,12 +29,12 @@ const register = require("./routes/register");
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const { Message } = require("./models/messages");
 const CryptoJs = require("crypto-js");
-
+const PORT=process.env.PORT||8000
 const app = express();
 
 app.use(
   cors({
-    origin: true, //url front
+    origin: "https://chat-app-finall-3s2u.vercel.app", //url front
     credentials: true,
   }),
 );
@@ -247,6 +247,6 @@ app.post("/code", async (req, res) => {
   }
 });
 //
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log("server running");
 });
