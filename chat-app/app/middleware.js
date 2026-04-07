@@ -5,7 +5,7 @@ export function middleware(request) {
   const { pathname } = request.nextUrl;
 
   // 1. إذا كان المستخدم يملك توكن ويحاول دخول صفحة تسجيل الدخول، انقله للداشبورد
-  if (token && (pathname === "/login"  pathname === "/verifyCode"  pathname === "/")) {
+  if (token && (pathname === "/login" || pathname === "/verifyCode" || pathname === "/")) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 
