@@ -4,7 +4,7 @@ require("dotenv").config();
 const transporter = nodemailer.createTransport({
   host: "sandbox.smtp.mailtrap.io",
   port: 2525,
-  secure: true, // use STARTTLS (upgrade connection to TLS after connecting)
+  secure: false, // use STARTTLS (upgrade connection to TLS after connecting)
   auth: {
     user: "00fa0e1c792a00",
     pass: "e72ac6aadab258",
