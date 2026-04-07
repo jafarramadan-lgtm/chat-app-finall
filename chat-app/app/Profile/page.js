@@ -10,8 +10,7 @@ import AccountActive from "./accountActive";
 
 export default async function Profile() {
   const cookiesStore = await cookies();
-  const token = cookiesStore.get("userToken");
-   if (!token ) redirect("/");
+ 
 
   return (
     <div className="w-9/12 md:h-fit   overflow-auto   no-scrollbar  text-black flex flex-col items-center   pt-10 gap-10 rounded-3xl">
