@@ -1,4 +1,5 @@
+import { Suspense } from "react";
 import VerifyClient from "./verify";
 export default function Verify(){
-  return <VerifyClient/>
+  return <Suspense fallback={<div>Loading...</div>}><VerifyClient/></Suspense>
 }
