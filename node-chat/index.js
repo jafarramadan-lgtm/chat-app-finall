@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://chat-app-finall-3s2u.vercel.app/", //url front
+    origin: "https://chat-app-finall-3s2u.vercel.app", //url front
     credentials: true,
   }),
 );
