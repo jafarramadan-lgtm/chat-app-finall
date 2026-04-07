@@ -46,7 +46,7 @@ export default function Register() {
             alert("password not same Repeate Password");
             return;
           }
-          const url = "http://localhost:8000/register";
+          const url = "https://chat-app-finall-1.onrender.com/register";
           try {
             const response = await fetch(url, {
               method: "POST",

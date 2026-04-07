@@ -57,13 +57,13 @@ export default function PrimarySearchAppBar({ setFriends }) {
     useEffect(() => {
       setMounted(true);
       const getImage = async () => {
-        const res = await fetch("http://localhost:8000/getFriendsLis", {
+        const res = await fetch("https://chat-app-finall-1.onrender.com/getFriendsLis", {
           method: "GET",
           credentials: "include",
         });
         const dataa = await res.json();
         setFriends(dataa);
-        const response = await fetch("http://localhost:8000/getImageProfile", {
+        const response = await fetch("https://chat-app-finall-1.onrender.com/getImageProfile", {
           method: "GET",
           credentials: "include",
         });
@@ -121,7 +121,7 @@ export default function PrimarySearchAppBar({ setFriends }) {
 
         // };
         try {
-          const response = await fetch("http://localhost:8000/search", {
+          const response = await fetch("https://chat-app-finall-1.onrender.com/search", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -228,7 +228,7 @@ export default function PrimarySearchAppBar({ setFriends }) {
             <KeyboardBackspaceOutlinedIcon
               onClick={async () => {
                 //
-                const res = await fetch("http://localhost:8000/getFriendsLis", {
+                const res = await fetch("https://chat-app-finall-1.onrender.com/getFriendsLis", {
                   method: "GET",
                   credentials: "include",
                 });

@@ -11,8 +11,8 @@ try{
   const newToken = jwt.sign(payload, secretkey, { expiresIn: "1h" });
   res.cookie("userToken", newToken, {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
     maxAge: 3600000,
   });
    res.json({ message: "token renewed" });

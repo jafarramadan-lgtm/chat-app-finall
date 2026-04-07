@@ -2,8 +2,7 @@ const cloudinary = require("cloudinary").v2;
 const express = require("express");
 const { User } = require("./models/users");
 const { Code } = require("./models/code");
-
-const bcrypt = require("bcrypt");
+ const bcrypt = require("bcrypt");
 require("dotenv").config();
 const secretkey = process.env.SECRETKEY;
 const login = require("./routes/login");
@@ -36,7 +35,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000", //url front
+    origin: "https://chat-app-finall-3s2u.vercel.app/", //url front
     credentials: true,
   }),
 );
@@ -234,8 +233,8 @@ app.post("/code", async (req, res) => {
       const token = jwt.sign(payload, secretkey, { expiresIn: "1h" });
       res.cookie("userToken", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax",
+        secure: true,
+        sameSite: "none",
         maxAge: 3600000,
       });
       return res.status(200).send({ message: "Success Code" });

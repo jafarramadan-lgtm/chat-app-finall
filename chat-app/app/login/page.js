@@ -36,7 +36,7 @@ export default function Login() {
         onSubmit={async (e) => {
           setload(true);
           e.preventDefault();
-          const url = "http://localhost:8000/login";
+          const url = "https://chat-app-finall-1.onrender.com/login";
 
           try {
             const response = await fetch(url, {

@@ -35,7 +35,7 @@ export default function Friends({ setMyFriends, myFriends ,friends,setFriends}) 
         <div
           onClick={async () => {
             try {
-              const response = await fetch("http://localhost:8000/friendship", {
+              const response = await fetch("https://chat-app-finall-1.onrender.com/friendship", {
                 method: "POST",
                 credentials: "include",
                 headers: {

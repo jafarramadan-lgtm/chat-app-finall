@@ -18,7 +18,7 @@ export default function Clients({ secretkey }) {
   const [onlinefriend, setonlinefriend] = useState(false);
   useEffect(() => {
     try {
-      socketRef.current = new WebSocket("ws://localhost:3005");
+      socketRef.current = new WebSocket("wss://chat-app-finall-1.onrender.com:3005");
       socketRef.current.onopen = () => {
         console.log("Socket opened");
       };
@@ -63,7 +63,7 @@ export default function Clients({ secretkey }) {
     const fetchHistory = async () => {
       if (myFriends._id) {
         try {
-          const res = await fetch("http://localhost:8000/getlastmessage", {
+          const res = await fetch("https://chat-app-finall-1.onrender.com/getlastmessage", {
             method: "POST",
             credentials: "include",
             headers: {

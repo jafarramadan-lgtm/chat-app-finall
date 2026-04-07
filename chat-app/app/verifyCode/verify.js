@@ -66,7 +66,7 @@ export default function VerifyClient() {
         onClick={async () => {
           try {
             const fullCode = myCode.join("");
-             const response = await fetch("http://localhost:8000/code", {
+             const response = await fetch("https://chat-app-finall-1.onrender.com/code", {
               method: "POST",
               credentials: "include",
               headers: {

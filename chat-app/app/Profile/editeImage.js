@@ -24,7 +24,7 @@ export default function EditeImage() {
       const formDta = new FormData();
       formDta.append("image", selectFile);
       try {
-        const res = await fetch("http://localhost:8000/editeImageProfile", {
+        const res = await fetch("https://chat-app-finall-1.onrender.com/editeImageProfile", {
           method: "POST",
           body: formDta,
           credentials: "include",
@@ -46,7 +46,7 @@ export default function EditeImage() {
 
     const getImage = async () => {
       setLoad(true);
-      const response = await fetch("http://localhost:8000/getImageProfile", {
+      const response = await fetch("https://chat-app-finall-1.onrender.com/getImageProfile", {
         method: "GET",
         credentials: "include",
       });

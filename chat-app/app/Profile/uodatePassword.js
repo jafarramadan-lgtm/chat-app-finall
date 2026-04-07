@@ -25,7 +25,7 @@ export default function UpdatePassword() {
       setCurrentPassword("");
       return;
     }
-    const res = await fetch("http://localhost:8000/updatePassword", {
+    const res = await fetch("https://chat-app-finall-1.onrender.com/updatePassword", {
       method: "POST",
       credentials: "include",
       headers: {

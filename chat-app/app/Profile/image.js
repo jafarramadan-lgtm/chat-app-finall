@@ -18,7 +18,7 @@ export default function ImageAvatars() {
     setMounted(true);
     setload(true);
     const getImage = async () => {
-      const response = await fetch("http://localhost:8000/getImageProfile", {
+      const response = await fetch("https://chat-app-finall-1.onrender.com/getImageProfile", {
         method: "GET",
         credentials: "include",
       });

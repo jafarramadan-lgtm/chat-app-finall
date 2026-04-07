@@ -36,7 +36,7 @@ const[loaddeactivated,setloaddeactivated]=useState(false)
           <button
             onClick={async () => {
               setloadlogout(true)
-              const res = await fetch("http://localhost:8000/logout", {
+              const res = await fetch("https://chat-app-finall-1.onrender.com/logout", {
                 method: "GET",
                 credentials: "include",
               });
@@ -56,7 +56,7 @@ const[loaddeactivated,setloaddeactivated]=useState(false)
           <button
             onClick={async () => {
               setloaddelete(true)
-              const res = await fetch("http://localhost:8000/delete", {
+              const res = await fetch("https://chat-app-finall-1.onrender.com/delete", {
                 method: "GET",
                 credentials: "include",
               });
@@ -78,7 +78,7 @@ const[loaddeactivated,setloaddeactivated]=useState(false)
             onClick={async () => {
               try {
                 setloadexport(true)
-                const res = await fetch("http://localhost:8000/export", {
+                const res = await fetch("https://chat-app-finall-1.onrender.com/export", {
                   method: "GET",
                   credentials: "include",
                 });
@@ -106,7 +106,7 @@ const[loaddeactivated,setloaddeactivated]=useState(false)
           <button
             onClick={async () => {
               setloaddeactivated(true)
-              const res = await fetch("http://localhost:8000/activateAccount", {
+              const res = await fetch("https://chat-app-finall-1.onrender.com/activateAccount", {
                 method: "GET",
                 credentials: "include",
               });
